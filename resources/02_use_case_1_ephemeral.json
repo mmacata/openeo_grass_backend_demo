@@ -1,0 +1,54 @@
+{
+  "process_graph": {
+    "process_id": "raster_exporter",
+    "args": {
+      "collections": [
+        {
+          "process_id": "min_time",
+          "args": {
+            "collections": [
+              {
+                "process_id": "NDVI",
+                "args": {
+                  "collections": [
+                    {
+                      "process_id": "filter_daterange",
+                      "args": {
+                        "collections": [
+                          {
+                            "process_id": "filter_bbox",
+                            "args": {
+                              "collections": [
+                                {
+                                  "product_id": "LL.sentinel2A_openeo_subset.strds.S2A_B04"
+                                },
+                                {
+                                  "product_id": "LL.sentinel2A_openeo_subset.strds.S2A_B08"
+                                }
+                              ],
+                              "bottom": 38.9,
+                              "left": -4.8,
+                              "right": -4.6,
+                              "top": 39.1,
+                              "ewres": 0.0001,
+                              "nsres": 0.0001,
+                              "srs": "EPSG:4326"
+                            }
+                          }
+                        ],
+                        "from": "2017-04-12 11:17:08",
+                        "to": "2017-09-04 11:18:26"
+                      }
+                    }
+                  ],
+                  "red": "S2A_B04",
+                  "nir": "S2A_B08"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

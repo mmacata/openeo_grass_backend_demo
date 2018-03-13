@@ -1,0 +1,43 @@
+{
+  "process_graph": {
+    "process_id": "raster_exporter",
+    "args": {
+      "collections": [
+        {
+          "process_id": "udf_reduce_time",
+          "args": {
+            "collections": [
+              {
+                "process_id": "filter_daterange",
+                "args": {
+                  "collections": [
+                    {
+                      "process_id": "filter_bbox",
+                      "args": {
+                        "collections": [
+                          {
+                            "product_id": "LL.openeo_mapset_2.strds.S2A_B08_filter_daterange_NDVI"
+                          }
+                        ],
+                        "bottom": 38.9,
+                        "left": -4.8,
+                        "right": -4.6,
+                        "top": 39.1,
+                        "ewres": 0.0001,
+                        "nsres": 0.0001,
+                        "srs": "EPSG:4326"
+                      }
+                    }
+                  ],
+                  "from": "2017-04-12 11:17:08",
+                  "to": "2017-09-04 11:18:26"
+                }
+              }
+            ],
+            "python_file_url": "https://storage.googleapis.com/datentransfer/aggr_func.py"
+          }
+        }
+      ]
+    }
+  }
+}
